@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { PageHeader } from "@/components/layout/page-header";
 import { ProblemList } from "@/components/problems/problem-list";
 import { SuggestionBanner } from "@/components/shared/suggestion-banner";

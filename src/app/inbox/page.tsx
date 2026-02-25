@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { PageHeader } from "@/components/layout/page-header";
 import { SignalList } from "@/components/signals/signal-list";
 import { getSignals } from "@/lib/actions/signals";
