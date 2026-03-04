@@ -1,10 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Include Drizzle migration files in the serverless function bundle
-  // so the runtime migrator can find them in /var/task/drizzle on Vercel.
+  // Prevent Next.js from bundling better-sqlite3 — it's a native addon
+  // that must be require()'d directly, not inlined into the JS bundle.
+  serverExternalPackages: ["better-sqlite3"],
+  // Include the better-sqlite3 native binary in the Vercel function bundle.
   outputFileTracingIncludes: {
-    "/**": ["./drizzle/**"],
+    "/**": ["./node_modules/better-sqlite3/**"],
   },
 };
 
