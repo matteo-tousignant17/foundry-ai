@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/layout/page-header";
 import { PrdEditor } from "@/components/prds/prd-editor";

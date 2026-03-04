@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { PageHeader } from "@/components/layout/page-header";
 import { RoadmapTable } from "@/components/roadmap/roadmap-table";
 import { SuggestionBanner } from "@/components/shared/suggestion-banner";

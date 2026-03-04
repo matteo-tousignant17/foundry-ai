@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { PageHeader } from "@/components/layout/page-header";
 import { PrdList } from "@/components/prds/prd-list";
 import { getPrds } from "@/lib/actions/prds";

@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { PageHeader } from "@/components/layout/page-header";
 import { DiscoveryBoard } from "@/components/discovery/discovery-board";
 import { getSignals } from "@/lib/actions/signals";

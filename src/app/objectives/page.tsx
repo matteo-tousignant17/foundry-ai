@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { PageHeader } from "@/components/layout/page-header";
 import { ObjectiveList } from "@/components/objectives/objective-list";
 import { getObjectives } from "@/lib/actions/objectives";
