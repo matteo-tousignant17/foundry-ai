@@ -1,5 +1,6 @@
 export async function register() {
   if (process.env.NEXT_RUNTIME === "nodejs") {
+    try {
     const { client } = await import("@/lib/db");
     await client.executeMultiple(`
       CREATE TABLE IF NOT EXISTS signals (
@@ -127,5 +128,9 @@ export async function register() {
         created_at INTEGER NOT NULL
       );
     `);
+    console.log("[instrumentation] DB schema initialized OK");
+    } catch (err) {
+      console.error("[instrumentation] DB init failed — app will start but DB calls will error:", err);
+    }
   }
 }
